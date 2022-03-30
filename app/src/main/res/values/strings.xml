@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Github App</string>
+
+    <string name="name">Name</string>
+    <string name="username">username</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="total_following">Total following</string>
+    <string name="following">Following</string>
+    <string name="total_follower">Total Follower</string>
+    <string name="follower">Follower</string>
+    <string name="total_repository">0</string>
+    <string name="repository">Repositories</string>
+    <string name="search_message">Find Your Friend Here</string>
+
+    <string name="no_follower">Be the first to follow %s</string>
+    <string name="no_following">%s has not follow anyone</string>
+    <string name="user_not_found">User Not Found</string>
+
+    <string name="search_hint">Find your friend!</string>
+</resources>

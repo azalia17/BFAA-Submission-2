@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detail"
+        style="@style/CardAppearance"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="@color/background_card"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/ConstraintLayout"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_name_detail"
+                style="@style/TextContent"
+                android:layout_marginStart="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/name"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_username_detail"
+                style="@style/TextUname"
+                android:text="@string/username"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_name_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_detail" />
+
+            <TextView
+                android:id="@+id/tv_company_detail"
+                style="@style/TextContent"
+                android:text="@string/company"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_username_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_username_detail"
+                app:layout_constraintBottom_toTopOf="@id/tv_location_detail"/>
+
+            <TextView
+                android:id="@+id/tv_location_detail"
+                style="@style/TextContent"
+                android:text="@string/location"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_company_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_company_detail"
+                app:layout_constraintBottom_toBottomOf="@id/iv_avatar"/>
+
+            <TextView
+                android:id="@+id/tv_total_following"
+                style="@style/TextContent"
+                android:text="@string/total_following"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/iv_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_divider" />
+
+            <TextView
+                android:id="@+id/tv_following"
+                style="@style/TextFollow"
+                android:text="@string/following"
+                app:layout_constraintEnd_toEndOf="@id/tv_total_following"
+                app:layout_constraintStart_toStartOf="@id/tv_total_following"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_following" />
+
+            <ImageView
+                android:id="@+id/iv_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+                app:layout_constraintVertical_bias="0.257" />
+
+            <TextView
+                android:id="@+id/tv_total_follower"
+                style="@style/TextContent"
+                android:text="@string/total_follower"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_divider"
+                app:layout_constraintTop_toTopOf="@id/iv_divider" />
+
+            <TextView
+                android:id="@+id/tv_follower"
+                style="@style/TextFollow"
+                android:text="@string/follower"
+                app:layout_constraintEnd_toEndOf="@id/tv_total_follower"
+                app:layout_constraintStart_toStartOf="@id/tv_total_follower"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_follower" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/repository"
+                style="@style/CardAppearance"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/background_repo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_divider">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/ConstraintLayout"
+                    android:padding="13dp">
+
+                    <TextView
+                        android:id="@+id/tv_total_repo"
+                        style="@style/TextContent"
+                        android:layout_marginEnd="5dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/total_repository"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_repository"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_repository"
+                        style="@style/TextContent"
+                        android:layout_marginStart="10dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/repository"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_total_repo"
+                        app:layout_constraintStart_toEndOf="@id/tv_total_repo"
+                        app:layout_constraintTop_toTopOf="@+id/tv_total_repo" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:tabTextColor="@color/follow_color"
+                app:tabSelectedTextColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/repository"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
